@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html >
+  <head>
+    <meta charset="UTF-8">
+    <title>Maqueta entrega P1, AP</title>
+    
+    
+    	<link rel="stylesheet" href="css/style.css">
+
+    	<script src="jquery/jquery.js" type="text/javascript">
+		</script>
+        
+        <script src="javascript/main.js" type="text/javascript">
+		</script>
+		 <script src="javascript/formularios.js" type="text/javascript">
+		</script>
+		 <script src="javascript/datos.js" type="text/javascript">
+		</script>
+
+    
+    
+    
+  </head>
+
+  <body>
+
+  <div id="login">
+  <div class="login-triangle"></div>
+  
+  <h2 class="login-header">Log in</h2>
+
+  <form class="login-container">
+  	<div id="texto-error-usuario"></div>
+    <p><input type="text" value="" placeholder="cedula" id="txtUsuario"></p>
+    <div id="texto-error-contraseña"></div>
+    <p><input type="password" value="" placeholder="contraseña" id="txtContraseña"></p>
+    <p><input type="button" value="Log in" id="btnLogin"></p>
+    <p><div id="texto-error-login"></div></p>
+  </form>
+</div>
+
+<div id="contenedor-operador">
+ 
+	<div class="cabezal clearfix">
+	    <img id="logo" src="img/logo.jpg" alt="logo" height="120px" width="150">
+	      <ul id="navPrincipal">
+	        <li>
+	          <a href="#" id="btnNuevoPaquete">Nuevo Paquete</a>
+	        </li>
+	        <li>
+	          <a href="#" id="btnAsignarPaquete">Asignar paquete a repartidor</a>
+	        </li>
+	        <li>
+	          <a href="#" id="btnCargaEstados">Carga de estados paquete</a>
+	        </li>
+	        <li>
+	          <a href="#" id="btnReportes">Reportes</a>
+	        </li>
+	      </ul>
+	      <div id="loginRegistro">
+      		<a href="#" id="btnDesconectarse">desconectarse</a>
+    	</div>
+	</div>
+
+  <div id="contenido">
+
+  		<div id="bienvenida"><h1>Bienvenido usuario operador, seleccione una opción.</h1></div>
+    	
+    	<div id="nuevoPaquete">
+
+    		<form>
+    		Datos del remitente:
+    		<br>
+    		<br>
+    		<table>
+    		<tr>
+    		<td>Nombre:</td> <td><input type="text" value="" id="txtNombreR"></td><td><div id="errorNombreR" class="colorError"></div></td>
+    		</tr>
+    		<br>
+    		<tr>
+    		<td>Apellido:</td> <td><input type="text" value="" id="txtApellidoR"></td><td><div id="errorApellidoR" class="colorError"></div></td>
+    		</tr>
+    		<br>
+    		<tr>
+    		<td>Cedula:</td> <td><input type="text" value="" id="txtCedulaR"></td><td><div id="errorCedulaR" class="colorError"></div></td>
+    		</tr>
+    		</table>
+    		<br>
+    		<br>
+    		<hr>
+    		<br>
+    		<br>
+    		Datos del destinatario:
+    		<br>
+    		<br>
+    		<table>
+    		<tr>
+    		<td>Nombre:</td> <td><input type="text" value="" id="txtNombreD"></td><td><div id="errorNombreD" class="colorError"></div></td>
+    		</tr>
+    		<br>
+    		<tr>
+    		<td>Apellido:</td> <td><input type="text" value="" id="txtApellidoD"></td><td><div id="errorApellidoD" class="colorError"></div></td>
+    		</tr>
+    		<br>
+    		<tr>
+    		<td>Cedula:</td> <td><input type="text" value="" id="txtCedulaD"></td><td><div id="errorCedulaD" class="colorError"></div></td>
+    		</tr>
+    		</table>
+    		<br>
+    		<br>
+    		<table>
+    		<td>Dirección:</td> <td><input type="text" value="" id="txtDireccionD"></td><td><div id="errorDireccionD" class="colorError"></div></td>
+    		</table>
+    		<br>
+    		<br>
+    		<hr>
+    		<br>
+    		<br>
+    		<table>
+    		<td>Peso del paquete (Kg):</td> <td><input type="text" value="" id="txtPesoPaquete"></td><td><div id="errorPesoPaquete" class="colorError"></div></td>
+    		</table>
+    		<br>
+    		<br>
+    		<hr>
+    		<br>
+    		<table>
+    		<tr>
+    		<td><input type="button" value="Aceptar" id="btnIngresoPaquete"></td><td><div id="resultadoIngresoPaquete"></div></td>
+    		</tr>
+    		</table>
+    		
+    	</div>
+    	<div id="asignarPaquete">
+
+    	Paquetes a entregar:
+    	<br>	
+    	<div id="tablaPaquetes"></div>
+    	<hr>
+    	Repartidores disponibles para sus paquetes:
+    	<br>
+    	<div id="tablaRepartidores"></div>
+    	<hr>
+    	<br>
+    	<table>
+    	<tr>
+    	<td>Ingrese el codigo del paquete:</td> <td><input type="text" value="" id="txtAsignarCodigoP"></td><td><div id="errorAsignarCodigoP" class="colorError"></div></td>
+    	</tr>
+    	<br>
+    	<tr>
+    	<td>Ingrese el codigo del repartidor:</td> <td><input type="text" value="" id="txtAsignarRepartidor"></td><td><div id="errorAsignarCodigoR" class="colorError"></div></td>
+    	</tr>
+     </table>
+     <table>
+    	<tr>
+    	<td><input type="button" value="Aceptar" id="btnAceptarAsignarPaquete"></td><td><div id="errorResultadoAsignarPaquete" class="colorError"></div></td>
+    	</tr>
+       </table>    	
+
+    	</div>
+    	<div id="cargaEstados">
+    	Paquetes:
+    	<br>
+    	<div id="tablaPaquetesCargaEstados"></div>
+    	<hr>
+    	Carga de estados:
+    	<br>
+    	<br>
+    	<table>
+    	<tr>
+    	<td>Ingrese el codigo del paquete:</td><td><input type="text" value="" id="txtCargaEstadosCodigoP"></td><td><div id="errorCargaEstadosCodigoP" class="colorError"></div></td>
+    	</tr>
+    	<tr>
+    	<td>Ingrese el proximo estado de ese paquete: </td><td><select id="selectCargaEstados">
+    		<option value="Viajando">En viaje</option>
+    		<option value="Entregado">Entregado al destinatario</option>
+    	</select></td>
+    	</tr>
+    	<tr>
+    	<td><input type="button" value="Aceptar" id="btnAceptarCargaEstados"></td><td><div id="errorBtnCargaEstados" class="colorError"></div></td>
+    	</tr>
+    	</table>
+    		
+    	</div>
+    	<div id="reportes">
+    		
+    		<div id="seguimientoPaquete"> 
+    		Seguimiento de un paquete:
+    		<hr>
+    		<br>
+    		Seleccione el codigo del paquete: <select id="selectSeguimientoPaquete"></select>
+    		<br>
+    		<input type="button" value="Aceptar" id="btnAceptarSeguimientoPaquete">
+    		<br>
+    		<br>
+    		<div id="listoSeguimientoPaquete"></div>
+    		</div>
+    		<hr>	
+    		 <div id="reporteEntregaRepartidor"> 
+  			<br>
+  			Resumen entregas por repartidor:
+  			<hr>
+    		<br>
+    		Seleccione el codigo del repartidor: <select id="selectEntregaRepartidor"></select>
+    		<br>
+    		<input type="button" value="Aceptar" id="btnAceptarEntregaRepartidor">
+    		<br>
+    		<br>
+    		<div id="listoEntregaRepartidor"></div>
+    		<hr>	
+
+ 		 </div>
+
+
+
+
+    	</div>
+
+  </div>
+
+  <div id="lateral">
+   <div id="listadoPaquetesPendientes"></div>
+  </div>
+
+  <div id="pie">
+    Copyright 2016 &#169; - BoxExpress S.A.
+  </div>
+
+</div>
+
+
+<div id="contenedor-consulta">
+ 
+	<div class="cabezal clearfix">
+	    <img id="logo" src="img/logo.jpg" alt="logo" height="120px" width="150">
+	     <div id="texto-user-consulta">
+
+	     <h1>Usuario cliente, bienvenido.</h1>
+
+	     </div>
+	      <div id="loginRegistro">
+      		<a href="#" id="btnDesconectarse2">desconectarse</a>
+    	</div>
+	</div>
+
+  <div id="contenido">
+    <div id="seguimientoPaqueteConsulta"> 
+    		Seguimiento de un paquete:
+    		<hr>
+    		<br>
+    		Seleccione el codigo del paquete: <select id="selectSeguimientoPaqueteConsulta"></select>
+    		<br>
+    		<input type="button" value="Aceptar" id="btnAceptarSeguimientoPaqueteConsulta">
+    		<br>
+    		<br>
+    		<div id="listoSeguimientoPaqueteConsulta"></div>
+    		</div>
+    		<hr>	
+  </div>
+ 
+
+  <div id="lateral">
+    <h2>Por cualquier error en su paquete, contactenos.</h2>
+  </div>
+
+  <div id="pie">
+    Copyright 2016 &#169; - BoxExpress S.A.
+  </div>
+
+</div>
+    
+    
+    
+    
+    
+  </body>
+</html>
